@@ -65,7 +65,7 @@ if __name__ == '__main__':
     while True:
         print()
         printListTodo()
-        print('Do you want to Add or Remove Task')
+        print('If u want to Show All Task Enter : show')
         print('If u want to Add Enter : add')
         print('If u want to Remove Enter : remove')
         print('If u want to Quit a Program Enter : q')
@@ -105,6 +105,8 @@ if __name__ == '__main__':
                 index_new_task+=1
                 task_list['data'].append(TaskToJson(new_task))
                 writeToPersist(task_list)
+        elif(choice == 'show'):
+            printListTodo()
         elif(choice == 'q'):
             break
         pass
